@@ -85,7 +85,6 @@ div a, div a:hover{
     color:inherit;
 }
 
-
 /*navbar*/
 
 header{
@@ -93,8 +92,14 @@ header{
 }
 
 .nav-item{
-    display: inline-flex;
     vertical-align: baseline;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item-1{
+    justify-content: flex-start;
 }
 
 nav{
@@ -141,14 +146,7 @@ nav ul {
     padding: 14px 0;
 }
 
-.nav-item-1 a span{
-    width: 10px;
-    display: inline-block;
-    background-color: black;
-    height: 2px;
-}
-
-.nav-item-1 a:hover{
+.navbar-nav li:hover, .nav-item-1 a:hover{
     -webkit-transform: skew(-10deg);
     -moz-transform: skew(-10deg);
     transform: skew(-10deg);
@@ -169,6 +167,25 @@ nav ul {
 .nav-item-2{
     justify-content: flex-end;
 }
+
+.row .offcanvas{
+    width: 25%;
+}
+.navbar-nav li{
+    padding: 5% 0;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.navbar-nav li a{
+    font-size: 40px;
+}
+
+.close-icon{
+    cursor: pointer;
+    color: #e00b25;
+}
+
+
 
 /*Product Detail*/
 
@@ -322,10 +339,10 @@ nav ul {
     margin-top: 5.3333333333vw;
 }
 
-.container-big-heading div{
+.container-big-heading div h1{
     font-family: WhyteInktrapBook,Helvetica,Arial,sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 75px;
     margin: 0 auto;
     max-width: 50rem;
     line-height: 0.9;
