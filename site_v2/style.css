@@ -147,9 +147,7 @@ nav ul {
 }
 
 .navbar-nav li:hover, .nav-item-1 a:hover{
-    -webkit-transform: skew(-10deg);
-    -moz-transform: skew(-10deg);
-    transform: skew(-10deg);
+    font-style: oblique;
     cursor: pointer;
 }
 
@@ -276,7 +274,7 @@ nav ul {
     border: none;
     padding: 18px;
     border-radius: 3px;
-    width: 80%;
+    width: 90%;
 }
 
 .order-button:hover{
@@ -315,6 +313,8 @@ nav ul {
 .detail-grid-button{
     grid-row: 3;
     grid-column: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .product-price{
@@ -358,11 +358,12 @@ nav ul {
     margin-bottom: 8vw;
 }
 
-.container-product-infos div h4{
+.container-product-infos div .product-info-heading{
     font-size: 18px;
     font-weight: 500;
     line-height: 1.1em;
     letter-spacing: -.06em;
+    margin-bottom: 1.8vw;
 }
 
 .product-about{
@@ -384,7 +385,74 @@ nav ul {
     font-size: 22px;
 }
 
+
 /*Accordion*/
+
+.accordion-button:hover{
+    font-style: italic;
+}
+
+.accordion-button::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    background-color: #191919;
+}
+
+.accordion-header .accordion-button::after{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-plus' width='32' height='32' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000000' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='12' y1='5' x2='12' y2='19' /%3E%3Cline x1='5' y1='12' x2='19' y2='12' /%3E%3C/svg%3E");
+    margin-right: 2%;
+}
+
+.accordion-header .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-plus' width='32' height='32' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000000' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='12' y1='5' x2='12' y2='19' /%3E%3Cline x1='5' y1='12' x2='19' y2='12' /%3E%3C/svg%3E");
+    transform: none;
+}
+
+.accordion-header .accordion-button{
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: -.06em;
+    font-size: 22px;
+    padding: 1vw 0;
+}
+
+.accordion .accordion-item{
+    border: none;
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color:inherit;
+}
+
+.accordion-header .accordion-button:focus {
+    z-index: 3;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+/*First Image Grid*/
+ .first-image-grid-container{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(50% - 2vw) calc(50% - 2vw);
+    grid-column-gap: 4vw;
+    grid-row-gap: 4vw;
+    row-gap: 4vw;
+ }
+
+.first-image-grid-container img:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
 
 
 
