@@ -685,24 +685,31 @@ animation:blinking 1.25s infinite;
      font-style:italic;
  }
 
-
-
-/*Media Queries*/
-
-/*Tablet*/
-
-@media screen and (max-width: 1024px){
+ 
+ 
+ /*Media Queries*/
+ 
+ /*Tablet*/
+ 
+ @media screen and (max-width: 1024px){
+     
+     .row .offcanvas{
+         width: 75%;
+     }
         
     .primary-grid-container{
         grid-template-rows: repeat(3,auto);
         grid-template-columns: repeat(2,1fr);
         grid-template-areas:
-            "image-small-1 image-small-1"
-            "image-small-2 image-small-3" 
-            "product-info product-info"
-            "image-large image-small-4";
+        "image-small-1 image-small-1"
+        "image-small-2 image-small-3" 
+        "product-info product-info"
+        "image-large image-small-4";
     }
-
+    
+    .primary-grid-image-large img{
+        position: relative;
+    }
     .container-product-infos{
         flex-direction: column;
     }
@@ -723,6 +730,13 @@ animation:blinking 1.25s infinite;
 
     } 
 
+    .image-grid-heading p{
+        font-size: 28px;
+    }
+    .first-image-grid-left img{
+        position: relative;
+    }
+
     .footer-container{
         flex-direction: column;
     }
@@ -733,6 +747,18 @@ animation:blinking 1.25s infinite;
 
     .imprint{
         width: 100%;
+    }
+}
+
+/*Smartphone*/
+
+@media screen and (max-width: 576px){
+    .nav-item-1-anchor{
+        display: none;
+    }
+
+    .container-big-heading div h1{
+        font-size: 50px;
     }
 }
 
