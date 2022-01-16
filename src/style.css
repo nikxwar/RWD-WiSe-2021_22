@@ -692,12 +692,49 @@ animation:blinking 1.25s infinite;
 /*Tablet*/
 
 @media screen and (max-width: 1024px){
-    .nav-item-1, .nav-item-2{
-        display: none;
+        
+    .primary-grid-container{
+        grid-template-rows: repeat(3,auto);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+            "image-small-1 image-small-1"
+            "image-small-2 image-small-3" 
+            "product-info product-info"
+            "image-large image-small-4";
     }
 
-} 
+    .container-product-infos{
+        flex-direction: column;
+    }
 
+    .product-about, .product-info-accordion{
+        width: 100%;
+    }
+
+    .second-image-grid-container div:first-child {
+        grid-column: 1/4;
+        grid-row: 1/4;
+        position: relative;
+    }
+
+    .second-image-grid-container .second-image-grid-small-picture {
+        grid-column: auto;
+        grid-row: 4/5;
+
+    } 
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .communication-container{
+        width: 100%;
+    }
+
+    .imprint{
+        width: 100%;
+    }
+}
 
 /*Bootstrap Grid*/
 
