@@ -197,7 +197,7 @@ nav ul {
     "image-large image-small-1 image-small-2" 
     "image-large product-info product-info"
     "image-large image-small-3 image-small-4";
-    padding-top: 80px;
+    padding-top: 25px;
     padding-right: 2.6666666667vw;
     margin-bottom: 8.3333333333vw;
     grid-gap: 1.3333333333vw;
@@ -441,7 +441,12 @@ nav ul {
     box-shadow: none;
 }
 
+.accordion-body-text{
+    margin: 0;
+}
+
 /*First Image Grid*/
+
  .first-image-grid-container{
     position: relative;
     width: 100%;
@@ -601,7 +606,7 @@ animation:blinking 1.25s infinite;
 }
 
 .product-card-name:hover{
-font-style: italic;
+    font-style: italic;
 }
 
 .product-card-price{
@@ -611,6 +616,88 @@ font-style: italic;
     letter-spacing: -.05em;
     margin-bottom: 3.2vw;
 }
+
+/* footer*/
+.footer-container{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    padding: 7.3333333333vw 2.6666666667vw .2666666667vw;
+    width: 100%;
+    background: #23293c;
+    color: #fff;
+    padding: 5vw;
+    box-shadow: 0 4px 4px rgba(0,0,0,.18);
+}
+
+.communication-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 33vw;
+}
+
+.communication-icon-container{
+    background-color: #23293c;
+    border: none;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.communication-channel{
+    margin-bottom: 4.6666666667vw;
+    flex-direction: row;
+    text-align: start;
+    width: 50%;
+    display: -moz-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.imprint{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     width: 40%;
+ }
+
+ .imprint .imprint-item:first-child{
+    border-top: 2px solid rgba(205,205,205,.2);
+ }
+
+ .imprint-item{
+    font-size:30px;
+    padding: .64em 0;
+    border-bottom: 2px solid rgba(205,205,205,.2);
+    letter-spacing: -.06em;
+ }
+
+ .imprint-item:hover{
+     font-style:italic;
+ }
+
+
+
+/*Media Queries*/
+
+/*Tablet*/
+
+@media screen and (max-width: 1024px){
+    .nav-item-1, .nav-item-2{
+        display: none;
+    }
+
+} 
+
 
 /*Bootstrap Grid*/
 
