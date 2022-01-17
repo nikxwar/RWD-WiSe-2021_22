@@ -85,6 +85,11 @@ div a, div a:hover{
     color:inherit;
 }
 
+img{
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1) , 0px 1px 2px 0px rgba(0,0,0,0.06) ;
+}
+
+
 /*navbar*/
 
 header{
@@ -387,11 +392,6 @@ nav ul {
     width: 23vw;
 }
 
-.container-product-infos div ul{
-    font-size: 22px;
-}
-
-
 /*Accordion*/
 
 .accordion-button:hover{
@@ -538,8 +538,8 @@ nav ul {
 .container-more-products h3{
     width: 100%;
     color: #191919;
-    font-size: 25px;
     font-family: HelveticaNowText,Helvetica,Arial,sans-serif;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.1em;
     letter-spacing: -.06em;
@@ -596,6 +596,10 @@ animation:blinking 1.25s infinite;
     padding: 2vw 2vw 0;
 }
 
+.product-card-image:hover{
+    cursor: pointer;
+}
+
 .product-card-name{
     font-size: 17px;
     font-weight: 400;
@@ -616,6 +620,8 @@ animation:blinking 1.25s infinite;
     letter-spacing: -.05em;
     margin-bottom: 3.2vw;
 }
+
+
 
 /* footer*/
 .footer-container{
@@ -640,7 +646,7 @@ animation:blinking 1.25s infinite;
 }
 
 .communication-icon-container{
-    background-color: #23293c;
+    background-color: #303851;
     border: none;
     min-width: 50px;
     min-height: 50px;
@@ -649,6 +655,12 @@ animation:blinking 1.25s infinite;
     justify-content: center;
     align-items: center;
     padding: 15px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.19);
+}
+
+.communication-icon-container:hover{
+    background-color: #23293c;
 }
 
 .communication-channel{
@@ -663,6 +675,9 @@ animation:blinking 1.25s infinite;
     text-align: center;
 }
 
+.communication-channel div:hover{
+    cursor: pointer;
+}
 .imprint{
      display: flex;
      flex-direction: column;
